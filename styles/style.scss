@@ -124,3 +124,41 @@ header {
 }
 
 // MAIN
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
+  .main-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: hsl(227, 47%, 96%);
+      padding: 3rem 6rem;
+      margin: 0 1rem;
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card-content {
+      }
+
+      .card-update {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
