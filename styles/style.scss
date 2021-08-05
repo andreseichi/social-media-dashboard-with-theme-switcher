@@ -26,7 +26,11 @@ body {
   justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
-  background: hsl(0, 0%, 100%);
+  background: linear-gradient(
+    to bottom,
+    hsl(225, 100%, 98%) 30%,
+    hsl(0, 0%, 100%) 0
+  );
 }
 
 // Switch
@@ -86,26 +90,23 @@ input:checked + .slider:before {
 // Header
 header {
   width: 100%;
-  background: hsl(225, 100%, 98%);
-  min-height: 30vh;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 4rem auto;
+  margin: 4rem auto 0 auto;
   width: 80%;
-  background: hsl(225, 100%, 98%);
 
   .header-text {
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       color: hsl(230, 17%, 14%);
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.425rem;
       color: hsl(228, 12%, 44%);
       margin-top: 0.6rem;
     }
@@ -129,26 +130,32 @@ header {
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin-top: 5rem;
 
   .main-cards {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
 
     .card {
+      border-top: 5px hsl(208, 92%, 53%) solid;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       text-align: center;
       background: hsl(227, 47%, 96%);
       padding: 3rem 6rem;
-      margin: 0 1rem;
+      min-height: 30rem;
+      border-radius: 6px;
 
       .card-header {
         display: flex;
-        align-items: center;
         justify-content: center;
+
+        .user {
+          margin-left: 1rem;
+        }
       }
 
       .card-content {

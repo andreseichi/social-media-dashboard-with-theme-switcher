@@ -36,7 +36,8 @@ body {
           justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
-  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #f5f7ff), color-stop(0, white));
+  background: linear-gradient(to bottom, #f5f7ff 30%, white 0);
 }
 
 .switch {
@@ -102,8 +103,6 @@ input:checked + .slider:before {
 
 header {
   width: 100%;
-  background: #f5f7ff;
-  min-height: 30vh;
 }
 
 .header {
@@ -116,18 +115,17 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 4rem auto;
+  margin: 4rem auto 0 auto;
   width: 80%;
-  background: #f5f7ff;
 }
 
 .header .header-text h1 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   color: #1e202a;
 }
 
 .header .header-text h2 {
-  font-size: 1.3rem;
+  font-size: 1.425rem;
   color: #63687e;
   margin-top: 0.6rem;
 }
@@ -157,21 +155,23 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+  margin-top: 5rem;
 }
 
 .main .main-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main .main-cards .card {
+  border-top: 5px #198ff5 solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,25 +182,27 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
   background: #f0f2fa;
   padding: 3rem 6rem;
-  margin: 0 1rem;
+  min-height: 30rem;
+  border-radius: 6px;
 }
 
 .main .main-cards .card .card-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main .main-cards .card .card-header .user {
+  margin-left: 1rem;
 }
 
 .main .main-cards .card .card-update {
